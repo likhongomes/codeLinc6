@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Greg\\source\\repos\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj": {}
+    "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Greg\\source\\repos\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj": {
+    "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Greg\\source\\repos\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj",
         "projectName": "CodeLinkMVC",
-        "projectPath": "C:\\Users\\Greg\\source\\repos\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj",
+        "projectPath": "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj",
         "packagesPath": "C:\\Users\\Greg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Greg\\source\\repos\\CodeLinkMVC\\CodeLinkMVC\\obj\\",
+        "outputPath": "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,26 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
