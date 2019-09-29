@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj": {}
+    "/Users/likhongomes/Documents/Github/codeLinc6/CodeLinkMVC/CodeLinkMVC/CodeLinkMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj": {
+    "/Users/likhongomes/Documents/Github/codeLinc6/CodeLinkMVC/CodeLinkMVC/CodeLinkMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj",
+        "projectUniqueName": "/Users/likhongomes/Documents/Github/codeLinc6/CodeLinkMVC/CodeLinkMVC/CodeLinkMVC.csproj",
         "projectName": "CodeLinkMVC",
-        "projectPath": "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\CodeLinkMVC.csproj",
-        "packagesPath": "C:\\Users\\Greg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Greg\\source\\repos\\codeLinc6\\CodeLinkMVC\\CodeLinkMVC\\obj\\",
+        "projectPath": "/Users/likhongomes/Documents/Github/codeLinc6/CodeLinkMVC/CodeLinkMVC/CodeLinkMVC.csproj",
+        "packagesPath": "/Users/likhongomes/.nuget/packages/",
+        "outputPath": "/Users/likhongomes/Documents/Github/codeLinc6/CodeLinkMVC/CodeLinkMVC/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/likhongomes/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

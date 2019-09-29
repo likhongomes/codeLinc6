@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{1D5E3951-5018-42FE-93AA-BA9FC60EE10A}|Default">
+  <MonoDevelop.Ide.ItemProperties.CodeLinkMVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodeLinkMVC/Controllers/QuestionAskController.cs">
+    <Files>
+      <File FileName="CodeLinkMVC/Views/Admin/ListQuestions.cshtml" Line="20" Column="59" />
+      <File FileName="CodeLinkMVC/Models/QAnswerViewModel.cs" Line="15" Column="1" />
+      <File FileName="CodeLinkMVC/Controllers/SurveyQuestionModelsController.cs" Line="94" Column="14" />
+      <File FileName="CodeLinkMVC/Models/SurveyQuestionController.cs" Line="18" Column="10" />
+      <File FileName="CodeLinkMVC/Models/SurveyQuestionModel_old.cs" Line="1" Column="1" />
+      <File FileName="CodeLinkMVC/Models/UserModel.cs" Line="24" Column="1" />
+      <File FileName="CodeLinkMVC/Views/QuestionAsk/GetNextQ.cshtml" Line="22" Column="35" />
+      <File FileName="CodeLinkMVC/Controllers/QuestionAskController.cs" Line="12" Column="52" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CodeLinkMVC" expanded="True">
+            <Node name="CodeLinkMVC" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="QuestionAskController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Admin" expanded="True" />
+                <Node name="QuestionAsk" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
