@@ -1,0 +1,31 @@
+
+html,
+body {
+    height: 100%;
+    
+}
+#content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100% - 40px);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    padding: 50px 0px;
+}
+
+.card-title {
+    padding: 0px 0px 50px;
+}
+
+.font {
+    font-size: 2rem;
+}
