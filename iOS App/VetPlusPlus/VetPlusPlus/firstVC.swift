@@ -16,6 +16,9 @@ class firstVC: UIViewController {
     let emailTF = UITextField()
     let passwordTF = UITextField()
     let backButton = UIButton()
+    let logoImage = UIImageView()
+    
+    
     
 
     override func viewDidLoad() {
@@ -27,6 +30,18 @@ class firstVC: UIViewController {
         passwordTFSetup()
         emailTFSetup()
         backButtonSetup()
+        logoImageSetup()
+    }
+    
+    func logoImageSetup() {
+        view.addSubview(logoImage)
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
+        logoImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        logoImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        logoImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        logoImage.image = UIImage(named: "logo")
+        logoImage.contentMode = .scaleAspectFit
     }
     
     func loginButtonSetup() {
@@ -79,7 +94,9 @@ class firstVC: UIViewController {
     }
     
     @objc func guestButtonTapped() {
-        
+        let vc = dashboardVC()
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
     }
 
     func emailTFSetup() {

@@ -16,6 +16,7 @@
 		6EDBC21B234074E50035846B /* VetPlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBC21A234074E50035846B /* VetPlusPlusUITests.swift */; };
 		6EDBC22B234082490035846B /* dashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBC22A234082490035846B /* dashboardVC.swift */; };
 		6EDBC22F234092E60035846B /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBC22E234092E60035846B /* QuestionVC.swift */; };
+		6EDBC2312340C09E0035846B /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBC2302340C09E0035846B /* webView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6EDBC21C234074E50035846B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EDBC22A234082490035846B /* dashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardVC.swift; sourceTree = "<group>"; };
 		6EDBC22E234092E60035846B /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
+		6EDBC2302340C09E0035846B /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				6EDBC1FA234074E30035846B /* AppDelegate.swift */,
 				6EDBC1FC234074E30035846B /* firstVC.swift */,
 				6EDBC22A234082490035846B /* dashboardVC.swift */,
+				6EDBC2302340C09E0035846B /* webView.swift */,
 				6EDBC22E234092E60035846B /* QuestionVC.swift */,
 				6EDBC1FE234074E30035846B /* Main.storyboard */,
 				6EDBC201234074E50035846B /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			files = (
 				6EDBC22F234092E60035846B /* QuestionVC.swift in Sources */,
 				6EDBC1FD234074E30035846B /* firstVC.swift in Sources */,
+				6EDBC2312340C09E0035846B /* webView.swift in Sources */,
 				6EDBC1FB234074E30035846B /* AppDelegate.swift in Sources */,
 				6EDBC22B234082490035846B /* dashboardVC.swift in Sources */,
 			);

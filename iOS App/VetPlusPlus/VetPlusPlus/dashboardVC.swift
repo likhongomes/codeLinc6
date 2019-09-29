@@ -8,8 +8,50 @@
 
 import UIKit
 
-class dashboardVC: UIViewController {
+class dashboardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return array.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath as IndexPath) as! UITableViewCell
+        cell.textLabel?.text = array[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if category == "housing" {
+            let vc = webView()
+            vc.urlLink = housingLinks[indexPath.row]
+            //vc.modalTransitionStyle = .crossDissolve
+            present(vc, animated: true, completion: nil)
+        } else if category == "finance" {
+            let vc = webView()
+            vc.urlLink = financeLinks[indexPath.row]
+            vc.modalTransitionStyle = .crossDissolve
+            present(vc, animated: true, completion: nil)
+        } else if category == "health" {
+            let vc = webView()
+            vc.urlLink = healthLinks[indexPath.row]
+            vc.modalTransitionStyle = .crossDissolve
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    let housingListing = ["Veterans Affair - Call Center","Veterans Affair - Housing Assistance","Veterans Affair - HUD-VASH","Volunteers of America: Carolinas","Supportive Services for Veteran Families"]
+    
+    let housingLinks = ["https://www.va.gov/homeless/nationalcallcenter.asp","https://www.va.gov/housing-assistance/","https://www.va.gov/homeless/hud-vash.asp","https://www.voacarolinas.org/gethelp-maplecrt","https://www.va.gov/homeless/ssvf/"]
+            
+    let healthListing = ["Veterans Affair - Health Care"]
+    
+    let healthLinks = ["https://www.va.gov/homeless/ssvf/"]
+            
+    let financeListing = ["Veterans Affair - Pension"]
+    
+    let financeLinks = ["https://www.va.gov/pension/eligibility/"]
+    
+    var array = [String]()
+    let messageLabel = UITextView()
     let dashboardLabel = UILabel()
     let goodAfterNoonLabel = UILabel()
     let resourcesLabel = UILabel()
@@ -22,11 +64,21 @@ class dashboardVC: UIViewController {
     let healthButton = UIButton()
     let buttonStack = UIStackView()
     
+    
+    let tableView = UITableView()
+    var category = String()
     let backButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        if category == "housing" {
+            array = housingListing
+        } else if category == "finance" {
+            array = financeListing
+        } else if category == "health" {
+            array = healthListing
+        }
         topBarSetup()
         dashboardLabelSetup()
         goodAfterNoonLabelSetup()
@@ -37,6 +89,23 @@ class dashboardVC: UIViewController {
         housingButtonSetup()
         buttonStackSetup()
         editProfileButtonSetup()
+        tableViewSetup()
+        messageLabelSetup()
+    }
+    
+    func tableViewSetup() {
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60).isActive = true
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        if array.count == 0 {
+            tableView.isHidden = true
+        }
     }
     
     func topBarSetup() {
@@ -45,7 +114,7 @@ class dashboardVC: UIViewController {
         topView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         topView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         topView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        topView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        topView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         topView.backgroundColor = .red
     }
     
@@ -64,7 +133,7 @@ class dashboardVC: UIViewController {
         goodAfterNoonLabel.translatesAutoresizingMaskIntoConstraints = false
         goodAfterNoonLabel.topAnchor.constraint(equalTo: dashboardLabel.bottomAnchor, constant: 5).isActive = true
         goodAfterNoonLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        goodAfterNoonLabel.text = "Good Afternoon, Alfred!"
+        goodAfterNoonLabel.text = "Good Afternoon"
         goodAfterNoonLabel.font = UIFont.boldSystemFont(ofSize: 15)
         goodAfterNoonLabel.textColor = .white
     }
@@ -83,6 +152,23 @@ class dashboardVC: UIViewController {
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
     }
     
+    func messageLabelSetup() {
+        view.addSubview(messageLabel)
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        messageLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        messageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        messageLabel.text = "Please selecet a category to get results"
+        if array.count != 0 {
+            messageLabel.isHidden = true
+        }
+        messageLabel.isEditable = false
+        messageLabel.textAlignment = .center
+        
+    }
+    
     @objc func backButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
@@ -95,14 +181,15 @@ class dashboardVC: UIViewController {
         //housingButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
         housingButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         housingButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        housingButton.backgroundColor = .blue
+        //housingButton.backgroundColor = .blue
         //housingButton.sethousinggroundImage(UIImage(named: "housing"), for: .normal)
-        //housingButton.setImage(UIImage(named: "housing"), for: .normal)
+        housingButton.setImage(UIImage(named: "Housing"), for: .normal)
         housingButton.addTarget(self, action: #selector(housingButtonTapped), for: .touchUpInside)
     }
     
     @objc func housingButtonTapped() {
         let vc = QuestionVC()
+        vc.category = "housing"
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
@@ -114,14 +201,15 @@ class dashboardVC: UIViewController {
         //financeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
         financeButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         financeButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        financeButton.backgroundColor = .blue
-        //financeButton.setfinancegroundImage(UIImage(named: "finance"), for: .normal)
+        //financeButton.backgroundColor = .blue
+        financeButton.setBackgroundImage(UIImage(named: "Financial"), for: .normal)
         //financeButton.setImage(UIImage(named: "finance"), for: .normal)
         financeButton.addTarget(self, action: #selector(financeButtonTapped), for: .touchUpInside)
     }
     
     @objc func financeButtonTapped() {
         let vc = QuestionVC()
+        vc.category = "finance"
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
@@ -133,14 +221,15 @@ class dashboardVC: UIViewController {
         //healthButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
         healthButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         healthButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        healthButton.backgroundColor = .blue
+        //healthButton.backgroundColor = .blue
         //healthButton.sethealthgroundImage(UIImage(named: "health"), for: .normal)
-        //healthButton.setImage(UIImage(named: "health"), for: .normal)
+        healthButton.setImage(UIImage(named: "Health"), for: .normal)
         healthButton.addTarget(self, action: #selector(healthButtonTapped), for: .touchUpInside)
     }
     
     @objc func healthButtonTapped() {
         let vc = QuestionVC()
+        vc.category = "health"
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
@@ -163,7 +252,7 @@ class dashboardVC: UIViewController {
         buttonStack.distribution = .fillEqually
         buttonStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
         buttonStack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        buttonStack.spacing = 20
+        buttonStack.spacing = 40
         buttonStack.addArrangedSubview(housingButton)
         buttonStack.addArrangedSubview(financeButton)
         buttonStack.addArrangedSubview(healthButton)
