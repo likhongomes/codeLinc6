@@ -14,12 +14,12 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
-  background-color: #d45555;
+  margin-bottom: 3rem;
+  background-color: rgb(212, 85, 85);
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  top: 5rem;
   z-index: 10;
 }
 
