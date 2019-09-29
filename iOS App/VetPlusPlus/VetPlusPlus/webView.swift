@@ -16,7 +16,7 @@ class webView: UIViewController , WKNavigationDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        //webViewSetup()
+        webViewSetup()
         
     }
     
@@ -26,13 +26,14 @@ class webView: UIViewController , WKNavigationDelegate{
         webKit.navigationDelegate = self
         view = webKit
         webKit.translatesAutoresizingMaskIntoConstraints = false
-        webKit.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        webKit.bottomAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        webKit.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        webKit.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        let url = URL(string: "https://www.hackingwithswift.com")!
+        //webKit.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        //webKit.bottomAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        //webKit.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        //webKit.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        let url = URL(string: urlLink)!
         webKit.load(URLRequest(url: url))
-        webKit.allowsBackForwardNavigationGestures = true    }
+        webKit.allowsBackForwardNavigationGestures = true
+    }
 
     /*
     // MARK: - Navigation
