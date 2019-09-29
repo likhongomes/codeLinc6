@@ -40,12 +40,12 @@ namespace CodeLinkMVC.Controllers
                                         Order = s.Seq
                                     }
                                     )
-
                                     .Where(s => s.Answer != null)
                                     .OrderByDescending(s => s.Order)
-                                    .Take(1)
-                                    .DefaultIfEmpty();
-                next = answer.ElementAt(0).Order;
+                                    .First();
+
+
+                next = answer.Order;
                 next++;
             }
 
@@ -56,6 +56,22 @@ namespace CodeLinkMVC.Controllers
             viewModel.Question = nextQ;
             viewModel.Answer = new SurveyAnswerModel();
             return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Answer( QAnswerViewModel result)
+        {
+            if (ModelState.IsValid)
+            {
+                result.Answer.Id = Guid.NewGuid();
+                result.Answer.QID = result.Question.Id;
+
+                _context.Add(result.Answer);
+                _context.SaveChangesAsync();
+                return RedirectToAction(nameof(GetNextQ));
+            }
+            return Ok();
         }
     }
 }

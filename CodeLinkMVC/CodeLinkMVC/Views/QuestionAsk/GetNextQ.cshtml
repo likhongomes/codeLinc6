@@ -4,19 +4,39 @@
     ViewData["Title"] = "NextQuestion";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+ function yesFunction(yesNoBool) {
+  let x = document.getElementById("yesNoValue");
+  x.value = yesNoBool;
+  console.log(x.value);
+  window.form.submit();
+}
+</script>
+<form asp-action="Answer" asp-controller="QuestionAsk">
+    <div id="content">
+        <div class="card text-center font">
+            <div class="">
+                <div class="card-header">
+                    Housing Resources
+                </div>
+                <div class="card-body">
+                    <div class="card-title">@Html.DisplayFor(model => model.Question.Qtext)</div>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <button class="btn btn-primary" id="yesButton" onclick="yesFunction(true)">Yes</button>
+                    <button class="btn btn-primary" id="noButton" onclick="yesFunction(false)">No</button>
+                    @Html.HiddenFor(m => m.Answer.Answer,new {id = "yesNoValue"})
+                    @Html.HiddenFor(m => m.Question.Id)
+                    
+                </div>
+                <div class="card-footer text-muted">
+                    The Servant Center
+                </div>
+            </div>
+        </div>
+</form>
 
-<h1>Question</h1>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Question.Qtext)
-        </dd>
-        @Html.RadioButtonFor(model => model.Answer.Answer, true) Yes
-        @Html.RadioButtonFor(model => model.Answer.Answer, false) No
-    </dl>
-</div>
+
 <div>
     <a asp-action="Index">Next Question</a> |
     <a asp-action="Index">Skip</a>

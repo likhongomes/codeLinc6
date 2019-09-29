@@ -1,0 +1,24 @@
+.navBody {
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+  }
+
+  .formBody{
+      padding-top: 1rem;
+  }
+
+ .topForm {
+   padding: 20px 20px 20px 20px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgb(85, 118, 230);
+   margin: 10px 10px 10px 10px;
+ }
+
+ .topForm .row{
+     justify-content: space-between;
+ }
+
+  .navbar{
+      margin-bottom: 1.3rem;
+  }

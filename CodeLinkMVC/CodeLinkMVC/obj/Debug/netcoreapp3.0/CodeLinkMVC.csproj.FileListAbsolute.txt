@@ -157,3 +157,9 @@ C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreap
 C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyQuestion\Edit.cshtml.g.cs
 C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyQuestion\Index.cshtml.g.cs
 C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\QuestionAsk\GetNextQ.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\Home\Dashboard.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyAnswerModels\Create.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyAnswerModels\Delete.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyAnswerModels\Details.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyAnswerModels\Edit.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyAnswerModels\Index.cshtml.g.cs
