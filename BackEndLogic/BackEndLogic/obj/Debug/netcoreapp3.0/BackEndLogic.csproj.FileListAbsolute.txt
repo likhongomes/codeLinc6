@@ -1,0 +1,11 @@
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/bin/Debug/netcoreapp3.0/BackEndLogic
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/bin/Debug/netcoreapp3.0/BackEndLogic.deps.json
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/bin/Debug/netcoreapp3.0/BackEndLogic.runtimeconfig.json
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/bin/Debug/netcoreapp3.0/BackEndLogic.runtimeconfig.dev.json
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/bin/Debug/netcoreapp3.0/BackEndLogic.dll
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/bin/Debug/netcoreapp3.0/BackEndLogic.pdb
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/obj/Debug/netcoreapp3.0/BackEndLogic.csprojAssemblyReference.cache
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/obj/Debug/netcoreapp3.0/BackEndLogic.AssemblyInfoInputs.cache
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/obj/Debug/netcoreapp3.0/BackEndLogic.AssemblyInfo.cs
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/obj/Debug/netcoreapp3.0/BackEndLogic.dll
+/Users/likhongomes/Documents/Github/codeLinc6/BackEndLogic/BackEndLogic/obj/Debug/netcoreapp3.0/BackEndLogic.pdb
