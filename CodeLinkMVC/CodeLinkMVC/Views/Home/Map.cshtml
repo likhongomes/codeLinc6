@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align: center">
+    <strong>Locations of currently available shelthers in downtown Greensboro, North Carolina.</strong>
+    <br>
+    <br>
+</div>
+
+<div id="map"></div>
+
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var center = { lat: 36.072903, lng: -79.798416 };
+        var house1 = { lat: 36.076546, lng: -79.797214 };
+        var house2 = { lat: 36.070858, lng: -79.804725 };
+        var house3 = { lat: 36.071336, lng: -79.803620 };
+        var house4 = { lat: 36.067937, lng: -79.800849 };
+        var house5 = { lat: 36.068944, lng: -79.800538 };
+        var house6 = { lat: 36.075353, lng: -79.798505 };
+        var house7 = { lat: 36.077751, lng: -79.797861 };
+        36.072903, -79.798416
+        // The map, centered at house1
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 16, center: center });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: house1, map: map });
+        var marker = new google.maps.Marker({ position: house2, map: map });
+        var marker = new google.maps.Marker({ position: house3, map: map });
+        var marker = new google.maps.Marker({ position: house4, map: map });
+        var marker = new google.maps.Marker({ position: house5, map: map });
+        var marker = new google.maps.Marker({ position: house6, map: map });
+        var marker = new google.maps.Marker({ position: house7, map: map });
+    }
+</script>
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script>
+    async defer
+    src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDpjElc207EVRrOg-7ml9bfBy5cLuF5OLA&callback=initMap" >
+</script>

@@ -3,14 +3,18 @@
 }
 
     <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-        <a class="nav-link text-dark" asp-area="" asp-controller="SurveyQuestion" asp-action="Index">Admin</a>
-        <a class="nav-link text-dark" asp-area="" asp-controller="QuestionAsk" asp-action="GetNextQ">Death</a>
-        <a class="nav-link text-dark" asp-area="" asp-controller="SurveyAnswerModels" asp-action="Index">Sadness</a>
-
-
+        <div class="row">
+            <br />
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-md">
+                Welcome<br />
+                Please login or continue as a guest
+            </div>
+            <div class="col-md">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+            </div>
+        </div>
 
     </div>

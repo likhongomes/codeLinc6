@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CodeLinkMVC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+   
     <link rel="stylesheet" href="/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 
 
@@ -38,7 +37,7 @@
                     <img src="/media/servantNavBarLogo.png" class="rounded" alt="" width="40" height="40">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
                 </li>
             </ul>
         </div>
@@ -51,7 +50,7 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Log out</a>
+                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a>
                 </li>
             </ul>
         </div>
@@ -64,11 +63,6 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - CodeLinkMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -76,6 +70,9 @@
     <footer class="container" style="padding-top: 2rem">
         <p class="float-right"><a href="#">Back to top</a></p>
         <p>&copy; Developing Developers &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p><a class="nav-link text-dark" asp-area="" asp-controller="SurveyQuestion" asp-action="Index">Dispare</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="QuestionAsk" asp-action="GetNextQ">Death</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="SurveyAnswerModels" asp-action="Index">Sadness</a></p>
     </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
