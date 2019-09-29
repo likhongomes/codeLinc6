@@ -164,3 +164,4 @@ C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreap
 C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\SurveyAnswerModels\Index.cshtml.g.cs
 C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\CodeLinkMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\Home\Map.cshtml.g.cs
+C:\Users\Greg\source\repos\codeLinc6\CodeLinkMVC\CodeLinkMVC\obj\Debug\netcoreapp3.0\Razor\Views\Home\Survey.cshtml.g.cs

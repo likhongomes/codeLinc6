@@ -14,7 +14,7 @@ namespace CodeLinkMVC.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        const string SessionKeyLogin = "_Name";
+        string SessionKeyLogin = "No";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -42,6 +42,11 @@ namespace CodeLinkMVC.Controllers
             return RedirectToAction(nameof(Index));
         }
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Survey()
         {
             return View();
         }

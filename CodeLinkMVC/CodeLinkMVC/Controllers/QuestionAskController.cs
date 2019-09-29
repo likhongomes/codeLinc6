@@ -52,6 +52,10 @@ namespace CodeLinkMVC.Controllers
             var nextQ = _context.SurveyQuestion
                             .Where(s => s.Seq == next)
                             .FirstOrDefault();
+            if (nextQ == null)
+            {
+                return RedirectToAction("Dashboard","Home", new { area = "" });
+            }
             var viewModel = new QAnswerViewModel();
             viewModel.Question = nextQ;
             viewModel.Answer = new SurveyAnswerModel();

@@ -3,7 +3,7 @@
     ViewData["Title"] = "Dashbopard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@using Microsoft.AspNetCore.Http;
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -15,7 +15,8 @@
             <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Welcome, {NameHolder}</h1>
+                    <h1>Welcome, Steven</h1>
+                    <h1>@Context.Session.GetString("SessionKeyLogin")</h1>
                     <p>The information listed on this interactive dashboard has been placed in order of importance based on your goals to help keep you on track. </p>
                     <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
                     <div class="form-check">
@@ -45,7 +46,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
