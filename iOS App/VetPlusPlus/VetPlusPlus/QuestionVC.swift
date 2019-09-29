@@ -20,7 +20,7 @@ class QuestionVC: UIViewController {
     var x = 0
     var category = String()
     var array = [String]()
-    
+    let backButton = UIButton()
     
     //let housingQuestions:Array<String> = ["Are you currently staying somewhere?",
                                  //  "Are you satisfied with current place of living?",
@@ -50,8 +50,25 @@ class QuestionVC: UIViewController {
         responseTextFieldSetup()
         noButtonSetup()
         yesButtonSetup()
-        
-        
+        backButtonSetup()
+    }
+    
+    func backButtonSetup() {
+        view.addSubview(backButton)
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        backButton.backgroundColor = .clear
+        backButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        //backButton.backgroundColor = .blue
+        backButton.setBackgroundImage(UIImage(named: "blackBack"), for: .normal)
+        //backButton.setImage(UIImage(named: "back"), for: .normal)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func backButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
     func questionLabelSetup() {

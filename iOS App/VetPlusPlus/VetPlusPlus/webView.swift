@@ -12,12 +12,13 @@ import WebKit
 class webView: UIViewController , WKNavigationDelegate{
 
     let webKit = WKWebView()
+    let backButton = UIButton()
     var urlLink = String()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         webViewSetup()
-        
+        //backButtonSetup()
     }
     
     func webViewSetup()  {
@@ -34,6 +35,27 @@ class webView: UIViewController , WKNavigationDelegate{
         webKit.load(URLRequest(url: url))
         webKit.allowsBackForwardNavigationGestures = true
     }
+    
+    func backButtonSetup() {
+        view.addSubview(backButton)
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        backButton.backgroundColor = .clear
+    
+        backButton.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        backButton.setTitle("Back", for: .normal)
+        //backButton.backgroundColor = .blue
+        //backButton.setBackgroundImage(UIImage(named: "back"), for: .normal)
+        //backButton.setImage(UIImage(named: "back"), for: .normal)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func backButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+
 
     /*
     // MARK: - Navigation
